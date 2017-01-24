@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.</title>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/css/Site.css" rel="stylesheet" />
+
+    <!-- boosotrap pocinje->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Content/js/jquery-2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <!--boostrap kraj-->
+
+    <style>
+        #me {
+            height: 85%;
+            z-index: 950;
+            -webkit-animation: rotation 60s infinite linear;
+        }
+
+        @@-webkit-keyframes rotation {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(359deg);
+            }
+        }
+
+        #nav {
+            z-index: 900;
+        }
+    </style>
+
+</head>
+<body>
+    <nav id="nav" class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/Home"><img src="~/img/vanguardLogo.png" height="30" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li><a href="/Home">Home</a></li>
+                    <li><a href="/News">News</a></li>
+                    <li><a href="/Category">Categories</a></li>
+                    <li><a href="/Rules">Rules</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cray<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="#">Royal Paladin</a></li>
+                            <li><a href="#">Oracle Think Tank</a></li>
+                            <li><a href="#">Gold Paladin</a></li>
+                            <li><a href="#">Angel Feather</a></li>
+                            <li><a href="#">Genesis</a></li>
+                            <li role="separator" class="divider"></li>
+
+                            <li><a href="#">Kagero</a></li>
+                            <li><a href="#">Narukami</a></li>
+                            <li><a href="#">Tachikaze</a></li>
+                            <li><a href="#">Murakumo</a></li>
+                            <li><a href="#">Nubatama</a></li>
+
+                            <li role="separator" class="divider"></li>
+
+                            <li><a href="#">Spike Brothers</a></li>
+                            <li><a href="#">Dark Irregulars</a></li>
+                            <li><a href="#">Pale Moon</a></li>
+                            <li><a href="#">Gear Chronicle</a></li>
+
+                            <li role="separator" class="divider"></li>
+
+                            <li><a href="#">Granblue</a></li>
+                            <li><a href="#">Bermuda Triangle</a></li>
+                            <li><a href="#">Aqua Force</a></li>
+
+                            <li role="separator" class="divider"></li>
+
+                            <li><a href="#">Megacolony</a></li>
+                            <li><a href="#">Great Nature</a></li>
+                            <li><a href="#">Neo Nectar</a></li>
+
+                            <li role="separator" class="divider"></li>
+
+                            <li><a href="#">Nova Grappler	</a></li>
+                            <li><a href="#">Dimension Police</a></li>
+                            <li><a href="#">Link Joker</a></li>
+                            <li><a href="#">Etranger</a></li>
+
+                            <li role="separator" class="divider"></li>
+
+                            <li><a href="#">Cray Elemental</a></li>
+                            <li><a href="#">Touken Ranbu</a></li>
+
+
+                        </ul>
+
+
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Suport</a></li>
+                            <li><a href="#">About Forum</a></li>
+                            <li><a href="#">Privaci Settings</a></li>
+                            <li><a href="#">Rules</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search players">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span> Log in</a></li>
+                    <li><a href="~/Register"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- kraj navigacijske-->
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Zmajo & Micika inc.</p>
+        </footer>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Enter the world of Cray</h4>
+                </div>
+                <div class="modal-body">
+                    <img id="me" src="~/img/vanguardrearguardcircle.png" style="width:100%;padding-bottom:10px">
+
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon">Username</span>
+                        <input type="text" class="form-control" name="username" placeholder="Enter username">
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon">Password </span>
+                        <input type="password" class="form-control" name="password" placeholder="Enter passwrod">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Log in</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+        <!-- </div><!-- /.modal -->
+    </div>
+
+</body>
+</html>

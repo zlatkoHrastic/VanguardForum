@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Register page";
+}
+
+<h1>Register page for vanguard forum</h1>
+
+<div class="well">
+    <form>
+        <div class="input-group">
+            <span class="input-group-addon">Username</span>
+            <input type="text" class="form-control" name="username" placeholder="Enter username">
+        </div>
+        <br />
+        <div class="input-group">
+            <span class="input-group-addon">Password </span>
+            <input type="password" class="form-control" name="password" placeholder="Enter passwrod">
+        </div>
+
+        <br />
+        <div class="input-group">
+            <span class="input-group-addon">Password </span>
+            <input type="password" class="form-control" name="password2" placeholder="Retype password">
+        </div>
+
+        <br />
+        <div class="input-group">
+            <span class="input-group-addon">Email</span>
+            <input type="email" class="form-control" name="email" placeholder="Enter email">
+        </div>
+        <br />
+        <div class="form-group">
+            <label ">Secret Question:</label>
+            <select class="form-control" id="sel1">
+                <option>What is the first vanguard card you have ever seen?</option>
+                <option>Who is your favourite anime character?</option>
+                <option>What is your first pets name?</option>
+                <option>What is your mothers birth name?</option>
+            </select>
+        </div>
+
+
+        <br />
+        <div class="input-group">
+            <span class="input-group-addon">Answer</span>
+            <input type="text" class="form-control" name="questionAnswer" placeholder="Enter answer to secret question">
+        </div>
+
+        <br />
+        <label class="checkbox-inline"><input type="checkbox" value="">I accept the terms of this forum</label>
+
+        <br />
+        <br />
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+
+
